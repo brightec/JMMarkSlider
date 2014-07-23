@@ -1,5 +1,4 @@
 JMMarkSlider
-======================
 [![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)](https://github.com/andresbrun/ABCustomUINavigationController/blob/master/LICENSE)
 
 Fully customizable slider that allows you to set marks on it. You can set the color of the bar, marks and handler, the width of the marks and even an image for the handler.
@@ -88,3 +87,7 @@ Special thanks
 ------------
 
 I would want to thank to Cameron and MdelaMata for all your tips and help! :)
+=======
+============
+
+Fully customizable slider that allows you to set marks on it. You can set the color of the bar, marks and handler, the width of the marks and even an image for the handler.
