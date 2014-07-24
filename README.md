@@ -87,4 +87,4 @@ Hope you enjoy it!
 Special thanks
 ------------
 
-I would want to thank to Cameron and MdelaMata for all your tips and help! :)
+I would want to thank to <a href="http://www.cameroncooke.com/">Cameron Cooke</a> and MdelaMata for all your tips and help! :)
