@@ -41,7 +41,7 @@
 
 - (void)drawRect:(CGRect)rect
 {
-    [super awakeFromNib];
+    [super drawRect:rect];
     
     // We create an innerRect in which we paint the lines
     CGRect innerRect = CGRectInset(rect, 1.0, 10.0);
@@ -56,7 +56,7 @@
     CGContextAddLineToPoint(context, innerRect.size.width - 10, CGRectGetHeight(innerRect)/2);
     CGContextSetStrokeColorWithColor(context, [self.selectedBarColor CGColor]);
     CGContextStrokePath(context);
-    UIImage *selectedSide = [UIGraphicsGetImageFromCurrentImageContext() resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    UIImage *selectedSide = [UIGraphicsGetImageFromCurrentImageContext() resizableImageWithCapInsets:UIEdgeInsetsZero];
     
     // Unselected side
     CGContextSetLineCap(context, kCGLineCapRound);
@@ -65,7 +65,7 @@
     CGContextAddLineToPoint(context, innerRect.size.width - 10, CGRectGetHeight(innerRect)/2);
     CGContextSetStrokeColorWithColor(context, [self.unselectedBarColor CGColor]);
     CGContextStrokePath(context);
-    UIImage *unselectedSide = [UIGraphicsGetImageFromCurrentImageContext() resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    UIImage *unselectedSide = [UIGraphicsGetImageFromCurrentImageContext() resizableImageWithCapInsets:UIEdgeInsetsZero];
     
     // Set trips on selected side
     [selectedSide drawAtPoint:CGPointMake(0,0)];
@@ -77,7 +77,7 @@
         CGContextSetStrokeColorWithColor(context, [self.markColor CGColor]);
         CGContextStrokePath(context);
     }
-    UIImage *selectedStripSide = [UIGraphicsGetImageFromCurrentImageContext() resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    UIImage *selectedStripSide = [UIGraphicsGetImageFromCurrentImageContext() resizableImageWithCapInsets:UIEdgeInsetsZero];
     
     // Set trips on unselected side
     [unselectedSide drawAtPoint:CGPointMake(0,0)];
@@ -89,7 +89,7 @@
         CGContextSetStrokeColorWithColor(context, [self.markColor CGColor]);
         CGContextStrokePath(context);
     }
-    UIImage *unselectedStripSide = [UIGraphicsGetImageFromCurrentImageContext() resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    UIImage *unselectedStripSide = [UIGraphicsGetImageFromCurrentImageContext() resizableImageWithCapInsets:UIEdgeInsetsZero];
     
     UIGraphicsEndImageContext();
     
