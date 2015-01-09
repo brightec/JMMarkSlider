@@ -4,7 +4,7 @@ JMMarkSlider
 
 Fully customizable slider that allows you to set marks on it. You can set the color of the bar, marks and handler, the width of the marks and even an image for the handler.
 
-![alt tag](http://desarrolloios.es/wp-content/uploads/2014/07/JMMarkSlider.png)
+![alt tag](https://s3.amazonaws.com/cocoacontrols_production/uploads/control_image/image/4306/JMMarkSlider.png)
 
 
 How to Install it
