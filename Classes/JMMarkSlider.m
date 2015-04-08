@@ -58,15 +58,6 @@
     CGContextStrokePath(context);
     UIImage *selectedSide = [UIGraphicsGetImageFromCurrentImageContext() resizableImageWithCapInsets:UIEdgeInsetsZero];
     
-    // Unselected side
-    CGContextSetLineCap(context, kCGLineCapRound);
-    CGContextSetLineWidth(context, 12.0);
-    CGContextMoveToPoint(context, 6, CGRectGetHeight(innerRect)/2);
-    CGContextAddLineToPoint(context, innerRect.size.width - 10, CGRectGetHeight(innerRect)/2);
-    CGContextSetStrokeColorWithColor(context, [self.unselectedBarColor CGColor]);
-    CGContextStrokePath(context);
-    UIImage *unselectedSide = [UIGraphicsGetImageFromCurrentImageContext() resizableImageWithCapInsets:UIEdgeInsetsZero];
-    
     // Set trips on selected side
     [selectedSide drawAtPoint:CGPointMake(0,0)];
     for (int i = 0; i < [self.markPositions count]; i++) {
@@ -78,6 +69,17 @@
         CGContextStrokePath(context);
     }
     UIImage *selectedStripSide = [UIGraphicsGetImageFromCurrentImageContext() resizableImageWithCapInsets:UIEdgeInsetsZero];
+    
+    CGContextClearRect(context, rect);
+    
+    // Unselected side
+    CGContextSetLineCap(context, kCGLineCapRound);
+    CGContextSetLineWidth(context, 12.0);
+    CGContextMoveToPoint(context, 6, CGRectGetHeight(innerRect)/2);
+    CGContextAddLineToPoint(context, innerRect.size.width - 10, CGRectGetHeight(innerRect)/2);
+    CGContextSetStrokeColorWithColor(context, [self.unselectedBarColor CGColor]);
+    CGContextStrokePath(context);
+    UIImage *unselectedSide = [UIGraphicsGetImageFromCurrentImageContext() resizableImageWithCapInsets:UIEdgeInsetsZero];
     
     // Set trips on unselected side
     [unselectedSide drawAtPoint:CGPointMake(0,0)];
