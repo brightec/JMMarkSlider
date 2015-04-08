@@ -6,6 +6,10 @@ Fully customizable slider that allows you to set marks on it. You can set the co
 
 ![alt tag](https://s3.amazonaws.com/cocoacontrols_production/uploads/control_image/image/4306/JMMarkSlider.png)
 
+What's new
+------------
+#### 1.0.1
+Fix slider bar collapse each other
 
 How to Install it
 ------------
