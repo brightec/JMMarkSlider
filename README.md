@@ -1,3 +1,5 @@
+:warning: **Announcement: This library is no longer being actively developed**
+
 JMMarkSlider
 ======================
 [![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)](https://github.com/andresbrun/ABCustomUINavigationController/blob/master/LICENSE)
